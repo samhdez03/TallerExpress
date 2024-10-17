@@ -1,21 +1,21 @@
 import { Schema, model } from "mongoose";  
 
 	// 1. definimos la coleccion
-	let collection = 'empleados'
+	let collection = 'products'
 
 	// 2. definimos un esquema, recibe un objeto
 
 	let schema = new Schema({
-        nombre: {type:String, required:true},
-   		cargo: {type:String, required:true},
-    	salario: {type:Number, required:true},
+        name: {type:String, required:true},
+    	brand: {type:String, required:true},
+   		type: {type:String, required:true},
+    	price: {type:Number, required:true},
     	
 	}, {
     timestamps: true, //es un dato que guarda la fecha de creacion o update
 	})
 
-
 	//creamos el modelo y lo exportamos
-	let Empleado = model(collection, schema)
+	let Product = model(collection, schema)
 
-	export default Empleado
+	export default Product
