@@ -2,7 +2,6 @@
 import "dotenv/config.js"; //conexion a la base de datos
 // 2. configuracion para la conexion a la BD
 import '../../config/database.js'
-import mongoose from 'mongoose'; // Importar mongoose
 
 // 3. importamos el modelo de la base de datos
 import Employe from '../Employe.js'
@@ -31,5 +30,5 @@ let employees = [
     
 ];
 
-  //ejecutamos la funcion de mongoose de insert many
-  Employe.insertMany(employees)
+//ejecutamos la funcion de mongoose de insert many
+Employe.insertMany(employees)

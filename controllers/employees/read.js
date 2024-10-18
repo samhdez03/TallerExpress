@@ -13,7 +13,7 @@ let allEmploye = async (req, res, next) => { //peticion tipo request
     }
    
 } 
-
+//empleados por puesto
 let employeByPosition = async (req, res, next) => { //peticion tipo request
     try {
         console.log(req.params.position)
@@ -28,7 +28,7 @@ let employeByPosition = async (req, res, next) => { //peticion tipo request
     }
    
 } 
-
+//empleados por rango de salarios
 let employeeBySalaryRange = async (req, res, next) => {
     try {
         let { minSalary, maxSalary } = req.params; // Obtenemos los parámetros del rango
