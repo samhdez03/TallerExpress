@@ -1,7 +1,7 @@
 const error_handler = (error,req,res,next) => {
     console.log(error.status)
     if (error.status === 400) {
-        return res.status(400).json({
+        return res.status(400).json({ //se arroja cuando el formato no es un arreglo
             sucess: false,
             response:error,
             message:"The body of the request must be an object or an array"
